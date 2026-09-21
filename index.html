@@ -6,8 +6,9 @@
   <title>Sixteen — The Compilation Music Card | Paul K Saunders</title>
   <meta name="description" content="Put your finished track on a 16-track themed digital music card. $50 to submit for review, $450 on acceptance. Includes 25 cards to sell at $20, The Baseline Audit and a 90-minute call with Paul K Saunders.">
   <meta property="og:title" content="Sixteen — The Compilation Music Card">
-  <meta property="og:description" content="Your track deserves more than a stream. 16 tracks, one theme, your name on a physical smart-media card. Vol. 1: Road Stories.">
+  <meta property="og:description" content="Your track deserves more than a stream. 16 tracks, one theme, your name on a physical smart-media card. Vol. 1: Many Roads Traveled.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://compilation-card.netlify.app/assets/many-roads-traveled-card.jpg">
   <meta property="og:url" content="https://compilation-card.netlify.app/">
   <meta name="theme-color" content="#0F0F0F">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F0F0F'/%3E%3Ctext x='32' y='44' font-family='Verdana' font-weight='700' font-size='34' fill='%23D4A843' text-anchor='middle'%3E16%3C/text%3E%3C/svg%3E">
@@ -70,44 +71,11 @@
   .hero-buttons{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
   .hero-note{font-size:.85rem;color:var(--text-muted)}
 
-  /* ── The card (portrait, album-cover front) ── */
+  /* ── The card (hero image) ── */
   .card-stage{perspective:1600px;display:flex;justify-content:center;position:relative;padding:1rem 0}
-  .card-stage::before{content:'';position:absolute;inset:10% 20%;background:radial-gradient(ellipse,rgba(212,168,67,.18),transparent 70%);filter:blur(30px);pointer-events:none}
-  .card{width:min(100%,330px);aspect-ratio:5/7;max-width:100%;position:relative;border-radius:18px;overflow:hidden;color:var(--text-primary);transform:rotateY(-12deg) rotateX(6deg);transition:transform .2s ease;box-shadow:0 50px 90px -30px rgba(0,0,0,.85),0 0 0 1px rgba(212,168,67,.3),0 0 70px rgba(212,168,67,.1);display:flex;flex-direction:column;justify-content:space-between;padding:1.25rem}
-  /* artwork: night sky, horizon, road */
-  .card .art{position:absolute;inset:0;background:
-      radial-gradient(circle at 70% 52%,rgba(232,200,114,.95) 0 30px,rgba(232,200,114,.35) 32px,transparent 70px),
-      radial-gradient(ellipse at 50% 62%,rgba(212,168,67,.45),transparent 50%),
-      linear-gradient(180deg,#07070c 0%,#151322 30%,#3a2412 58%,#5a3414 61.5%,#0d0c0a 62%,#0a0a0a 100%);}
-  .card .art::before{content:'';position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(180deg,rgba(212,168,67,.04),rgba(212,168,67,.16));clip-path:polygon(47% 0,53% 0,100% 100%,0 100%)}
-  .card .art::after{content:'';position:absolute;left:50%;bottom:0;width:3px;height:38%;background:repeating-linear-gradient(180deg,var(--gold) 0 10px,transparent 10px 22px);transform:translateX(-50%);opacity:.7;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
-  .card .grain{position:absolute;inset:0;opacity:.35;background-image:radial-gradient(rgba(255,255,255,.08) .5px,transparent .6px);background-size:3px 3px;pointer-events:none}
-  .card>*{position:relative}
-  .card .top{display:flex;justify-content:space-between;align-items:flex-start}
-  .card .brand{font-weight:700;font-size:.8rem;letter-spacing:.16em;color:var(--gold)}
-  .card .brand span{display:block;color:var(--text-secondary);font-weight:500;font-size:.65rem;letter-spacing:.14em;margin-top:.2rem}
-  .card .nfc{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--gold);position:relative}
-  .card .nfc::before,.card .nfc::after{content:'';position:absolute;border-radius:50%;border:1.5px solid var(--gold);inset:5px}
-  .card .nfc::after{inset:9px;background:var(--gold);border:0}
-  .card .mid{margin-top:auto;margin-bottom:auto;padding-top:1.5rem}
-  .card .theme{font-weight:700;font-size:clamp(1.9rem,6vw,2.6rem);line-height:.98;letter-spacing:-.02em;text-transform:uppercase;text-shadow:0 2px 20px rgba(0,0,0,.6)}
-  .card .theme small{display:block;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-light);margin-top:.7rem;font-weight:600}
-  .card .bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:.75rem}
-  .card .tracks{display:grid;grid-template-columns:repeat(4,1fr);gap:3px 8px;font-size:.5rem;letter-spacing:.06em;color:var(--text-secondary);text-transform:uppercase}
-  .card .tracks i{font-style:normal;display:flex;align-items:center;gap:4px}
-  .card .tracks i::before{content:'';width:12px;height:2px;background:var(--gold);opacity:.8;border-radius:1px}
-  .card .tracks i.taken{color:var(--text-primary)}
-  .card .tracks i.taken::before{background:var(--text-primary)}
-  .card .tracks i.you{color:var(--gold-light);font-weight:700}
-  .card .tracks i.you::before{background:var(--gold-light);opacity:1;width:16px}
-  .card .qr{width:40px;height:40px;flex:0 0 auto;background:
-      linear-gradient(#f5f5f5,#f5f5f5) 0 0/12px 12px no-repeat,
-      linear-gradient(#f5f5f5,#f5f5f5) 100% 0/12px 12px no-repeat,
-      linear-gradient(#f5f5f5,#f5f5f5) 0 100%/12px 12px no-repeat,
-      repeating-linear-gradient(90deg,#f5f5f5 0 3px,transparent 3px 6px) 16px 16px/24px 24px no-repeat,
-      repeating-linear-gradient(0deg,#0f0f0f 0 3px,transparent 3px 6px) 16px 16px/24px 24px no-repeat;
-      border:2px solid #f5f5f5;border-radius:3px;box-sizing:content-box;background-color:#0f0f0f}
-  .card .tap{font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-secondary);line-height:1.5;text-align:right}
+  .card-stage::before{content:'';position:absolute;inset:8% 15%;background:radial-gradient(ellipse,rgba(212,168,67,.22),transparent 70%);filter:blur(36px);pointer-events:none}
+  .card{display:block;width:min(100%,380px);max-width:100%;position:relative;border-radius:14px;overflow:hidden;transform:rotateY(-10deg) rotateX(5deg);transition:transform .2s ease;box-shadow:0 50px 90px -30px rgba(0,0,0,.85),0 0 0 1px rgba(212,168,67,.3),0 0 70px rgba(212,168,67,.12)}
+  .card img{display:block;width:100%;height:auto;max-width:100%}
 
   /* ── Stats band (audit-band pattern) ── */
   .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:900px;margin:0 auto}
@@ -282,14 +250,14 @@
   </ul>
 </nav>
 
-<div class="strip"><span class="dot"></span>Now accepting tracks · Vol. 1: Road Stories · 15 slots left · 8 slots released per month · Submissions close November 30, 2026</div>
+<div class="strip"><span class="dot"></span>Now accepting tracks · Vol. 1: Many Roads Traveled · 15 slots left · 8 slots released per month · Submissions close November 30, 2026</div>
 
 <section class="hero">
   <div class="container">
     <div>
       <span class="hero-label">Sixteen · The Compilation Music Card</span>
       <h1>Your Track Deserves <span class="accent">More Than a Stream.</span></h1>
-      <p>Put the song you've already finished onto a professionally produced, physical digital music card — 16 tracks, one theme, your name in the liner notes — that you can hold, sell and hand to people. We produce it, we promote it, and you get 25 cards to sell at $20 each to earn your whole investment straight back. Vol. 1 is <em>Road Stories</em> — and track one is a song I wrote myself.</p>
+      <p>Put the song you've already finished onto a professionally produced, physical digital music card — 16 tracks, one theme, your name in the liner notes — that you can hold, sell and hand to people. We produce it, we promote it, and you get 25 cards to sell at $20 each to earn your whole investment straight back. Vol. 1 is <em>Many Roads Traveled</em> — and track one is a song I wrote myself.</p>
       <div class="hero-buttons">
         <a href="#pricing" class="btn-primary">Submit My Track for Review →</a>
         <a href="#music-card" class="btn-secondary">What Is a Music Card?</a>
@@ -297,25 +265,10 @@
       <p class="hero-note" style="margin-top:1.25rem;margin-bottom:0">$500 total · $50 to submit for review, $450 only if your track is accepted · Includes The Baseline Audit ($500 value) with a 90-minute one-to-one call · 8 slots a month</p>
     </div>
     <div class="card-stage">
-      <div class="card" id="card" aria-label="Portrait digital music card mock-up, front cover">
-        <div class="art" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
-        <div class="top">
-          <div class="brand">SIXTEEN<span>Vol. 1 · Smart Media</span></div>
-          <div class="nfc" aria-hidden="true" title="NFC"></div>
-        </div>
-        <div class="mid">
-          <div class="theme">Road<br>Stories<small>16 tracks · tap or scan to unlock</small></div>
-        </div>
-        <div class="bottom">
-          <div class="tracks" aria-hidden="true">
-            <i class="taken">01 PKS</i><i>02</i><i>03</i><i>04</i><i>05</i><i>06</i><i class="you">07 You</i><i>08</i><i>09</i><i>10</i><i>11</i><i>12</i><i>13</i><i>14</i><i>15</i><i>16</i>
-          </div>
-          <div>
-            <div class="qr" aria-hidden="true"></div>
-            <div class="tap" style="margin-top:.4rem">No app<br>needed</div>
-          </div>
-        </div>
-      </div>
+      <picture class="card" id="card">
+        <source srcset="assets/many-roads-traveled-card.webp" type="image/webp">
+        <img src="assets/many-roads-traveled-card.jpg" width="1024" height="1536" alt="Many Roads Traveled — the Vol. 1 collectible music card: 16 tracks about road life and touring. Tap to listen and collect." fetchpriority="high" decoding="async">
+      </picture>
     </div>
   </div>
 </section>
@@ -471,7 +424,7 @@
     <div class="theme-list">
       <div class="theme-row">
         <div class="vol">Vol. 01</div>
-        <div><h3>Road Stories</h3><span class="lane">Alt country · Americana · folk · acoustic</span></div>
+        <div><h3>Many Roads Traveled</h3><span class="lane">Alt country · Americana · folk · acoustic</span></div>
         <p>Songs from the road and the life of a touring musician: the van, the motel, the last set to eleven people, the drive home. Track 01 is already taken — <strong style="color:var(--text-primary)">"I Know Your Name"</strong>, written by Paul. Fifteen slots remain. The buyer: anyone who's ever loved someone who lives on the road.</p>
         <span class="status open">Open · 15 slots left</span>
       </div>
@@ -609,7 +562,7 @@
   <div class="container deadline">
     <div>
       <div class="section-label">Mark Your Calendar</div>
-      <h2 class="section-title" style="margin-bottom:0">Vol. 1 <span class="accent">Road Stories</span> Submissions Close</h2>
+      <h2 class="section-title" style="margin-bottom:0">Vol. 1 <span class="accent">Many Roads Traveled</span> Submissions Close</h2>
       <div class="date">November 30, 2026</div>
       <p class="sec">Once you claim your slot, you'll submit your final master, artwork or photo, bio and links by this date. After the sequencing lock, tracks are final — no swaps or re-masters — so the compilation goes to print on schedule and launches together.</p>
       <p style="margin-top:1.5rem"><a href="#pricing" class="btn-primary">Submit Before It Closes →</a></p>
@@ -640,7 +593,7 @@
       <details><summary>How do the 25 cards work?</summary><p>Every track owner receives 25 physical cards, shipped to you. Sell them for $20 each — at gigs, online, to your list — and you keep 100% of the money. Twenty-five sales returns your full $500. Want more? Additional cards are available at wholesale.</p></details>
       <details><summary>Who owns my track?</summary><p>You do. You grant a non-exclusive licence for your track to appear on this compilation, in physical and digital form. You are free to release, stream, sync and sell the same track anywhere else, before, during and after.</p></details>
       <details><summary>Do I earn royalties from the compilation itself?</summary><p>Your primary return is the 25 cards, which you sell direct and keep 100% of. Terms for any compilation-wide streaming or download income are set out in the participation agreement you receive at checkout.</p></details>
-      <details><summary>Is Paul really on the record?</summary><p>Yes. Track 01 of Vol. 1, Road Stories, is "I Know Your Name", a song Paul wrote about life on the road. He's not asking you to do anything with your track that he isn't doing with his own — and he's selling his 25 cards the same way you will.</p></details>
+      <details><summary>Is Paul really on the record?</summary><p>Yes. Track 01 of Vol. 1, Many Roads Traveled, is "I Know Your Name", a song Paul wrote about life on the road. He's not asking you to do anything with your track that he isn't doing with his own — and he's selling his 25 cards the same way you will.</p></details>
       <details><summary>What if my song doesn't fit any of the five themes?</summary><p>Tell us. New themes are announced as volumes fill, and the best pitch for a sixth compilation may well be yours. If we can't place your track on a theme, we won't take your money for it.</p></details>
       <details><summary>What is The Baseline Audit, exactly?</summary><p>A 40-question scored diagnostic across craft, audience, live performance and monetisation, taking about 45 minutes. You receive a scored report, a ranked list of what to fix first, and a written 12-month plan you can run yourself. It's sold separately at paulksaunders.com for $500 and is included in full with your track slot.</p></details>
       <details><summary>When is everything due?</summary><p>Your final master, photo, bio and links are due by November 30, 2026 for Vol. 1. After the sequencing lock, tracks cannot be swapped or re-mastered, even if you submitted early.</p></details>
